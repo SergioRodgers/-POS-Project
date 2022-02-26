@@ -7,67 +7,58 @@
     <h2>Join our community of Ballers and get 20% off your first purchase!!</h2> 
       </div>    
     </div>
-
-    <!-- Sign Up From -->
-    <div class="col-6 landing right-text">
-      <h1 style="margin-left: 50px">Sign Up Here!</h1>
-
+  </div>
+</div>
+  
       <!-- Sign Up -->
 
-      <div class="col-md-9 mb-md-0 mb-5" style="padding: auto; margin: auto">
-                <form id="contact-form" name="contact-form" action="https://formspree.io/f/xrgjzzoa" target="_blank" method="POST" style="padding-left: 60px;">
-                    <!--Grid row-->
-                    <div class="row" id="row">
-    
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <label for="name" class="">Your name</label>
-                                <input type="text" id="name" name="Name" class="form-control" style="box-shadow: 0 0.15rem 1.5rem 0 #c36f09;">                            
-                            </div>
-                        </div>
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <label for="lname" class="">Your Last Name</label>
-                                <input type="text" id="lname" name="Last Name" class="form-control" style="box-shadow: 0 0.15rem 1.5rem 0 #c36f09;">                           
-                            </div>
-                        </div>
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <label for="email" class="">Your email</label>
-                                <input type="text" id="email" name="Email" class="form-control" style="box-shadow: 0 0.15rem 1.5rem #c36f09;">                           
-                            </div>
-                        </div>             
-                    <!--Grid row-->               
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="pnum" class="">Your Phone Number</label>
-                            <input type="text" id="pnum" name="Cell Number" class="form-control" style="box-shadow: 0 0.15rem 1.5rem 0 #c36f09;">                       
-                        </div>
-                    </div>
-                    <!--Grid row-->
-                  
-                  <div class="col-md-12">
-                    <div class="md-form mb-0">
-                        <label for="message" class="">Message</label>
-                        <input type="text" id="message" name="Message" class="form-control" style="box-shadow: 0 0.15rem 1.5rem 0 #c36f09;">                       
-                    </div>
-                </div>
-                </div>
-                </form>
-                <br>
-                <div class="text-center text-md-left">
-                    <a class="btn btn-warning" onclick="document.getElementById('contact-form').submit();" style="margin-left: 10%; color: black; box-shadow: 0 0.15rem 1.5rem 0 #c36f09;">Submit</a>
-                    <a class="btn btn-dark" onclick="document.getElementById('contact-form').reset();" style="margin-left: 4%; color:white; box-shadow: 0 0.15rem 1.5rem 0 #c36f09;">Reset</a>
-                </div>
-                <div class="status"></div>
-            </div>
-    </div>
-     </div>
-</div>
+<div class="column">
+  <div class="row">
+    <div class="row d-flex justify-content-center">
+         <div class="col-6"></div>
+    <div class="col-6 col-md-3 col-lg-6 col-xl-4">
+          <div class="card bg-dark text-white" style="border-radius: 1rem; heigt:30%;">
+            <div class="card-body p-5 text-center">
 
+              <div class="mb-md-5 mt-md-4 pb-5">
+
+                <h1 class="fw-bold mb-2 text-uppercase">Login</h1>
+                <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="typeEmailX" class="form-control form-control-lg">
+                  <label class="form-label" for="typeEmailX" style="margin-left: 0px;">Email</label>
+                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                <div class="form-outline form-white mb-4">
+                  <input type="password" id="typePasswordX" class="form-control form-control-lg">
+                  <label class="form-label" for="typePasswordX" style="margin-left: 0px;">Password</label>
+                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+
+                <button class="btn btn-outline-light btn-lg px-5" type="submit" style="">Login</button>
+
+                <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                  <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                  <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                  <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                </div>
+
+              </div>
+
+              <div>
+                <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+     
+  </div>
+  
 </template>
 
 <script>
@@ -107,5 +98,7 @@ h2{
   padding-top:20%;
   padding-left:15%;
 } */
+
+/* sign up form */
 
 </style>
