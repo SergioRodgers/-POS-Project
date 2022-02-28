@@ -11,14 +11,31 @@
         <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>
 
-    <div style="margin-left: 35%">
+    <div style="margin-left: 25%">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <router-link class="btn btn-outline-warning" aria-current="page" to="/">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="btn btn-outline-warning" to="/about">About</router-link>
+          <router-link class="btn btn-outline-warning" to="/products">Dashboard</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="btn btn-outline-warning" to="/dashboard/cart">Cart</router-link>
+        </li>
+        <li class="nav-item dropdown">
+          <a class=" dropdown-toggle btn btn-outline-warning" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            Me
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><router-link class="dropdown-item" :to="{name: 'Profile'}">View Profile</router-link></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><router-link @click="logout" class="btn btn-outline-warning" :to="{ name: 'Home' }">Logout</router-link></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          
+        </li>
+        
         </ul>
     </div>
       
@@ -29,5 +46,20 @@
 
 
 <script>
-
+  export default {
+    data() {
+      return {
+        isActive: false,
+      };
+    },
+    methods: {
+      toggleNav() {
+        this.isActive = !this.isActive;
+      },
+      logout() {
+        localStorage.clear();
+        this.toggleNav;
+      },
+    },
+  };
 </script>
