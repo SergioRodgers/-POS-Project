@@ -18,7 +18,7 @@
          <div class="col-6"></div>
     <div class="col-6 col-md-3 col-lg-6 col-xl-4">
           <div class="card text-white" id="cardthing" style="border-radius: 1rem; heigt:30%;">
-            <div class="card-body p-5 text-center">
+            <form class="card-body p-5 text-center">
 
               <div class="mb-md-5 mt-md-4 pb-5">
 
@@ -51,7 +51,7 @@
                 <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
               </div>
 
-            </div>
+            </form>
           </div>
         </div>
       </div>
