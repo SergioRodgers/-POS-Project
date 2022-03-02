@@ -31,9 +31,14 @@
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
 
                 <div class="form-outline form-white mb-4">
+                  <div class="control">
                   <input type="password" id="typePasswordX" class="form-control form-control-lg">
+                  </div>
+                  
                   <label class="form-label" for="typePasswordX" style="margin-left: 0px;">Password</label>
-                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                  <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div>
+                </div>
+                
 
                 <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
@@ -63,10 +68,6 @@
 
 <script>
 
-
-export default {
-  name: 'Home',
-}
 </script>
 
 <style>
