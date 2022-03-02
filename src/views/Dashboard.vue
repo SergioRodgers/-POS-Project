@@ -1,18 +1,29 @@
 <template>
-  <div v-if="products">
+  <div v-if="products" class="container">
     <h2>Products</h2>
-      <div class="products-container" v-if="products">
+      <div class="products-container container" v-if="products">
           <!-- First card -->
-        <div class="card" style="width: 18rem;" v-for="product of products"
+          <div class="looping-over" v-for="product of products"
             :key="product._id">
-        <!-- <img :src="product.image" :alt="product.title" class="card-image-top"/> -->
+            <div class="card" style="width: 18rem;" >
+        <img :src="product.image" :alt="product.title" class="card-image-top"/>
         <div class="card-body">
           <h5 class="card-title">{{product.title}}</h5>
           <p class="card-text">Written By: {{ product.author_name }}-</p>
           <p class="card-text">Category: {{product.categories.join(', ')}}</p>
-          <router-link :to="{ name: 'ProductDetails', params: { id: product._id } }" class="btn btn-primary">more</router-link>
+          <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          
+            <a href="#" id="edit-but" type="button" class="btn btn" ><i class="fa fa-edit" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></a>
+            <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+            <a class="btn btn-danger" @click="deleteProduct" >delete</a>
+          </div>
+          <Modal />
         </div>
     </div>
+          </div>
+        
     </div>
   </div>
   <div v-else>Loading products...</div>
@@ -20,13 +31,21 @@
 </template>
 
 <script>
+import Modal from '@/components/Modal.products.edit.vue'
   export default {
     data(){
       return {
         products: null,
       };
     },
-    
+    methods:{
+      deleteProduct(){
+        fetch('https://balls-united.herokuapp.com/products/'+products._id, {
+        method: 'DELETE',
+      });
+      }
+    },
+    components: { Modal },
     mounted() {
       if (localStorage.getItem("jwt")) {
         fetch("https://balls-united.herokuapp.com/products", {
@@ -74,7 +93,10 @@
   margin-top:60px;
   color: black;
 }
-
+.products-container {
+  display: flex;
+  gap: 10px
+}
 
 
 
