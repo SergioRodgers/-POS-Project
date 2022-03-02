@@ -29,7 +29,7 @@
     
     mounted() {
       if (localStorage.getItem("jwt")) {
-        fetch("http://localhost:3200/products", {
+        fetch("https://balls-united.herokuapp.com/products", {
           method: "GET",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
@@ -42,7 +42,7 @@
             console.log(json)
             this.products.forEach(async (product) => {
               await fetch(
-                "http://localhost:3200/users/" + product.user_id,
+                "https://balls-united.herokuapp.com/users/" + product.user_id,
                 {
                   method: "GET",
                   headers: {

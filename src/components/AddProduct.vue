@@ -41,7 +41,7 @@ export default {
         alert("User not logged in");
         return this.$router.push({ name: "Home" });
       }
-      fetch("http://localhost:3000/posts", {
+      fetch("https://balls-united.herokuapp.com/posts", {
         method: "POST",
         body: JSON.stringify({
           title: this.title,

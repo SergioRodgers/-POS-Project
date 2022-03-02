@@ -10,7 +10,6 @@
           <h5 class="card-title">{{product.title}}</h5>
           <p class="card-text">Written By: {{ product.author_name }}-</p>
           <p class="card-text">Category: {{product.categories.join(', ')}}</p>
-          <router-link :to="{ name: 'ProductDetails', params: { id: product._id } }" class="btn btn-primary">more</router-link>
         </div>
     </div>
     </div>
@@ -29,7 +28,7 @@ export default {
   },
   mounted() {
     if(this.id){
-      fetch("http://localhost:3200/products/" + this.id, {
+      fetch("https://balls-united.herokuapp.com/products/" + this.id, {
       method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -41,7 +40,7 @@ export default {
         this.product = json;
         console.log(json)
         await fetch(
-          "http://localhost:3200/users/" + json.user_id,
+          "https://balls-united.herokuapp.com/users/" + json.user_id,
           {
             method: "GET",
             headers: {

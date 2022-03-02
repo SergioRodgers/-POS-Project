@@ -27,12 +27,12 @@
 
                 <div class="form-outline form-white mb-4">
                   <input type="email" id="typeEmailX" v-model="email" class="form-control form-control-lg">
-                  <label class="form-label" for="typeEmailX" style="margin-left: 0px;">Email</label>
+                  <label class="form-label text-dark" for="typeEmailX" style="margin-left: 0px;">Email</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
 
                 <div class="form-outline form-white mb-4">
                   <input type="password" id="typePasswordX" v-model="password"  class="form-control form-control-lg">
-                  <label class="form-label" for="typePasswordX" style="margin-left: 0px;">Password</label>
+                  <label class="form-label text-dark" for="typePasswordX" style="margin-left: 0px;">Password</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
                 <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
@@ -48,9 +48,11 @@
               </div>
 
               <div>
-                <p class="mb-0">Don't have an account? <router-link :to="{name: 'Signup'}" class="text-white-50 fw-bold">Sign Up</router-link></p>
+                <p class="mb-0">Don't have an account? <span type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</span></p>
               </div>
 
+              <Modal/>
+              <!-- END -->
             </form>
           </div>
         </div>
@@ -61,6 +63,7 @@
 </template>
 
 <script>
+import Modal from './Modal.register.vue'
 export default {
     data() {
         return {
@@ -68,9 +71,10 @@ export default {
             password: ""
         }
     },
+    components:{Modal},
     methods: {
     login() {
-      fetch("http://localhost:3200/users", {
+      fetch("https://balls-united.herokuapp.com/users", {
         method: "PATCH",
         body: JSON.stringify({
           email: this.email,

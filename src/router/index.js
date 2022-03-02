@@ -60,6 +60,7 @@ const routes = [
     props: true,
     
   },
+  
   {
     path: "/dashboard/cart",
     name: "Cart",
