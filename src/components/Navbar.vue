@@ -17,7 +17,10 @@
           <router-link class="btn btn-outline-warning" aria-current="page" to="/">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="btn btn-outline-warning" to="/about">About</router-link>
+          <router-link class="btn btn-outline-warning" to="/about">Products</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="btn btn-outline-warning" to="/cart">Cart</router-link>
         </li>
         </ul>
     </div>

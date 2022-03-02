@@ -3,6 +3,7 @@
     <h1 style="text-align: center; margin-top: 50px;">Our Products</h1>
   </div>
 
+
   <!-- Sort -->
 
   <div class="container d-flex justify-content-end mb-3 mt-5 pt-4">
@@ -47,11 +48,18 @@
 <div class="col">
     <!-- First card -->
     <div class="card" style="width: 18rem;">
-    <img src="../assets/images/GoldenState.jpg" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/k5k9rXjs/Golden-State.jpg" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">Golden State Warriors Vest (Home)</h5>
       <p class="card-text">R 299.90</p>
-      <a href="#" class="btn btn-primary"> Add to Cart</a>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
     </div>
   </div>
 </div>
@@ -60,11 +68,18 @@
   <!-- Second card -->
   <div class="col">
   <div class="card" style="width: 18rem;">
-    <img src="../assets/images/PurpLakers.jpg" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/BnBM9hMV/Purp-Lakers.jpg" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">LA Lakers Cotton Vest (Purple)</h5>
       <p class="card-text">R 299.90</p>
-      <a href="#" class="btn btn-primary">Add to Cart</a>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
     </div>
   </div>
   </div>
@@ -72,35 +87,54 @@
   <!-- Third card -->
   <div class="col">
   <div class="card" style="width: 18rem;">
-    <img src="../assets/images/yellowLA.jpg" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/VNSrBvrW/yellowLA.jpg" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">LA Lakers Cotton Vest (Yellow)</h5>
       <p class="card-text">R 299.90</p>
-      <a href="#" class="btn btn-primary">Add to Cart</a>
-    </div>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>    </div>
   </div>
   </div>
 
   <!-- 4th card -->
   <div class="col">
   <div class="card" style="width: 18rem;">
-    <img src="../assets/images/purpShorts.jpg" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/wTZdRBzp/purp-Shorts.jpg" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">LA Lakers Fleece Shorts (Purple)</h5>
       <p class="card-text">R 399.90</p>
-      <a href="#" class="btn btn-primary">Add to Cart</a>
-    </div>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>    </div>
   </div>
   </div>
 
   <!-- 5th card -->
   <div class="col">
   <div class="card" style="width: 18rem;">
-    <img src="../assets/images/WarriorsShorts.jpg" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/jdPrNbSn/Warriors-Shorts.jpg" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">Golden State Warriors Fleece Shorts</h5>
       <p class="card-text">R 399.90</p>
-      <a href="#" class="btn btn-primary">Add to Cart</a>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn-edit"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
     </div>
   </div>
   </div>
@@ -112,11 +146,18 @@
 <div class="col">
     <!-- First card -->
     <div class="card" style="width: 18rem;">
-    <img src="../assets/images/CBball.jpg" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/m2JtZR6c/CBball.jpg" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">Wilson Chicago Bulls Basketball</h5>
       <p class="card-text">R 499.90</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
     </div>
   </div>
 </div>
@@ -124,11 +165,18 @@
   <!-- Second card -->
   <div class="col">
   <div class="card" style="width: 18rem;">
-    <img src="" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/tRd5VvHC/LAball.jpg" class="card-img-top" alt="">
     <div class="card-body">
-      <h5 class="card-title">Card Head</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Wilson Los Angeles Lakers Basketball</h5>
+      <p class="card-text">R 499.90</p>
+     <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
     </div>
   </div>
   </div>
@@ -136,11 +184,18 @@
   <!-- Third card -->
   <div class="col">
   <div class="card" style="width: 18rem;">
-    <img src="" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/0y9D196p/1153296-BLUEYELLOW-1-xj-R.jpg" class="card-img-top" alt="">
     <div class="card-body">
-      <h5 class="card-title">Card Head</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Wilson Golden State Basketball</h5>
+      <p class="card-text">R 499.90</p>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
     </div>
   </div>
   </div>
@@ -148,11 +203,18 @@
   <!-- 4th card -->
   <div class="col">
   <div class="card" style="width: 18rem;">
-    <img src="" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/nc4hx77W/headband.jpg" class="card-img-top" alt="">
     <div class="card-body">
-      <h5 class="card-title">Card Head</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Jordan Jumpman Basketball Headband</h5>
+      <p class="card-text">R 249.90</p>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
     </div>
   </div>
   </div>
@@ -160,50 +222,29 @@
   <!-- 5th card -->
   <div class="col">
   <div class="card" style="width: 18rem;">
-    <img src="" class="card-img-top" alt="">
+    <img src="https://i.postimg.cc/JhDwrVvh/wheadband.jpg" class="card-img-top" alt="">
     <div class="card-body">
-      <h5 class="card-title">Card Head</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Jordan Jumpman Basketball Headband</h5>
+      <p class="card-text">R 249.90</p>
+      <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
+      
     </div>
   </div>
   </div>
 
   </div>  
 
-
-     
+    <!-- Pagination -->
 </template>
 
 <script>
-// Sort Function
-let products = JSON.parse(localStorage.getItem("products"))
-  ? JSON.parse(localStorage.getItem("products"))
-  : [
-      {
-        title: "Golden State Warriors Vest (Home)",
-        category: "Vest",
-        price: 299.90,
-      },
-      {
-        title: "Naruto Uzumaki Sweats",
-        category: "Pants",
-        price: 349.99,
-        img: "https://litb-cgis.rightinthebox.com/images/640x640/202201/bps/product/inc/hvbxpy1641365761840.jpg?fmt=webp&v=1",
-      },
-      {
-        title: "Itachi Uchiha Hoodie",
-        category: "Hoodie",
-        price: 399.99,
-        img: "https://litb-cgis.rightinthebox.com/images/640x640/202111/bps/product/inc/jrgnbe1637223954950.jpg?fmt=webp&v=1",
-      },
-      {
-        title: "Itachi Uchiha Black Hoodie",
-        category: "Hoodie",
-        price: 399.99,
-        img: "https://litb-cgis.rightinthebox.com/images/640x640/202109/bps/product/inc/jyhgbq1632378296164.jpg?fmt=webp&v=1",
-      },
-    ];
 
 
 </script>
@@ -213,14 +254,23 @@ let products = JSON.parse(localStorage.getItem("products"))
   margin: auto;
   margin-top:60px;
   color: black;
+  height:500px;
 }
+
 
 .form-label{
   color: black;
 }
 .sort{
-  color: white;
+  color: rgba(255, 255, 255, 0.784);
 }
+
+#del-but{
+  color: red;
+  height: auto;
+
+}
+
 
 
 

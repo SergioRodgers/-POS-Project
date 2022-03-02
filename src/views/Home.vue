@@ -40,9 +40,9 @@
                 <button class="btn btn-outline-light btn-lg px-5" type="submit" style="" onclick="">Login</button>
 
                 <div class="d-flex justify-content-center text-center mt-4 pt-1">
-                  <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
-                  <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
-                  <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                  <a href="#!" class="socials"><i class="fa fa-facebook-f"></i></a>
+                  <a href="#!" class="socials"><i class="fa fa-twitter"></i></a>
+                  <a href="#!" class="socials"><i class="fa fa-google"></i></a>
                 </div>
 
               </div>
@@ -70,6 +70,10 @@ export default {
 </script>
 
 <style>
+.socials{
+  padding: 5px;
+  color: white;
+}
 #cardthing {
   background: rgba(0, 0, 0, 0.403);
 }
