@@ -12,7 +12,7 @@
                             <div class="edit-icon d-flex">
                               <i class='fas fa-edit' style='font-size:24px' type="button" data-bs-toggle="modal" data-bs-target="#profileModal"></i>                                
                             </div>
-                            <Modal />
+                            <Modal v-bind:id="profile._id" />
 
                             <div class="profile-text">
                               <h4 class="profile-title">{{profile.fullname}}</h4>

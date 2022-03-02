@@ -7,7 +7,7 @@
                         <h5 class="modal-title text-dark" id="profileModalLabel">Edit Profile</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <form @submit.prevent="signup">
+                      <form @submit.prevent="editProfile">
                       <div class="modal-body">
                         <!-- BODY START -->
     
@@ -60,13 +60,16 @@ export default {
             cover:"",
             message:"",
             contact:"",
-            
-
+            fullname:"",
+            email:"",
+            password:""
         }
     },
     methods: {
       editProfile(){
-        fetch('https://balls-united.herokuapp.com/users/:id', {
+        console.log("we made it")
+        console.log(this.id)
+        fetch('https://balls-united.herokuapp.com/users/' + this.id, {
           method: 'PUT',
           body: JSON.stringify({
             image: this.profile,

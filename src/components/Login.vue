@@ -71,10 +71,10 @@ export default {
             password: ""
         }
     },
-    components:{Modal},
+    components:{ Modal },
     methods: {
-    login() {
-      fetch("https://balls-united.herokuapp.com/users", {
+     login() {
+      fetch("https://balls-united.herokuapp.com/users",  {
         method: "PATCH",
         body: JSON.stringify({
           email: this.email,
@@ -86,14 +86,20 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          localStorage.setItem("jwt", json.jwt);
-          alert("User logged in");
-          this.$router.push({ name: "Dashboard" });
+          if(json.jwt){
+            localStorage.setItem("jwt", json.jwt);
+            console.log(json.msg)
+            alert("User logged in");
+            this.$router.push({ name: "Dashboard" });
+          }
+          
         })
         .catch((err) => {
           alert(err);
         });
     },
+      
+    
   },
 
 }
