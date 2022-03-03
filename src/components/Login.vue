@@ -105,5 +105,8 @@ export default {
 </script>
 
 <style>
+body {
+  overflow: none !important;
+}
 
 </style>
