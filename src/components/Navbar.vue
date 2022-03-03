@@ -28,7 +28,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><router-link class="dropdown-item" :to="{name: 'Profile'}">View Profile</router-link></li>
-            <li><router-link class="dropdown-item" :to="{name: 'Profile'}">Delete Account</router-link></li>
+            
             <li><hr class="dropdown-divider"></li>
             <li><router-link @click="logout" class="btn btn-outline-warning" :to="{ name: 'Home' }">Logout</router-link></li>
           </ul>
@@ -62,6 +62,7 @@
         localStorage.clear();
         this.toggleNav;
       },
+      
     },
   };
 </script>

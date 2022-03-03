@@ -87,7 +87,7 @@ export default {
         .then((response) => response.json())
         .then((json) => {
           localStorage.setItem("jwt", json.jwt);
-          // console.log(json.jwt)
+          console.log(json.jwt)
           alert("User logged in");
           this.$router.push({ name: "Dashboard" });
           
