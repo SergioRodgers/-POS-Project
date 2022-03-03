@@ -4,13 +4,23 @@
     <h2>Products</h2>
       <div class="products-container" v-if="product">
           <!-- First card -->
-        <div class="card" style="width: 18rem;">
-        <img :src="product.image" :alt="product.title" class="card-image-top"/>
-        <div class="card-body">
-          <h5 class="card-title">{{product.title}}</h5>
-          <p class="card-text">Written By: {{ product.author_name }}-</p>
-          <p class="card-text">Category: {{product.categories.join(', ')}}</p>
-        </div>
+        <div class="card" style="width: 16rem;" >
+              
+                <img :src="product.image" :alt="product.title" title="More details" class="card-image-top"/>
+              
+              <div class="card-body">
+                <h5 class="card-title">{{product.title}}</h5>
+                <p class="card-text">Written By: {{ product.author_name }}-</p>
+                <p class="card-text">Category: {{product.categories.join(', ')}}</p>
+                <div class="d-flex mb-3">
+                <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+                <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+            
+                <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></a>
+                <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+                <a class="btn btn-danger" @click="deleteProduct">delete</a>
+                </div>
+              </div>
     </div>
     </div>
   </div>
@@ -25,6 +35,17 @@ export default {
     return {
       product: null,
     };
+  },
+  methods: {
+    deleteProduct(){
+        fetch('https://balls-united.herokuapp.com/products/' + product._id, {
+        method: 'DELETE',
+        
+      }).then(response => response.json()).then(() => 
+        {alert("Product deleted");
+        this.$router.push({ name: "Dashboard" });
+        });
+      }
   },
   mounted() {
     if(this.id){

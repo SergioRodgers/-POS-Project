@@ -53,7 +53,7 @@
 
 <script>
 export default {
-  props: ["id"],
+  
     data() {
         return {
             profile:"",
@@ -67,14 +67,15 @@ export default {
     },
     methods: {
       editProfile(){
-        console.log("we made it")
-        console.log(this.id)
-        fetch('https://balls-united.herokuapp.com/users/' + this.id, {
+        fetch('https://balls-united.herokuapp.com/users' ,{
           method: 'PUT',
           body: JSON.stringify({
             image: this.profile,
             cover: this.cover,
             message: this.message,
+            email: this.email,
+            password: this.password,
+            fullname: this.fullname
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -82,7 +83,10 @@ export default {
           },
         })
         .then((response) => response.json())
-        .then((json) => console.log(json));
+        .then((json) => {console.log(json)
+          alert("User not logged in");
+          this.$router.push({ name: "Profile" });
+        });
       }
     }
     

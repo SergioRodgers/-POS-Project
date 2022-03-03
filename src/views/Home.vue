@@ -25,9 +25,6 @@ export default {
   background: rgba(0, 0, 0, 0.403);
 }
 
-body {
-  overflow: hidden;
-}
 .landing {
   top: 290px;
   left: 50px;
