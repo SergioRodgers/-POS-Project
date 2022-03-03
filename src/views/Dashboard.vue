@@ -1,4 +1,7 @@
 <template>
+<Footer/>
+
+
   <div v-if="products" class="container">
     <h2>Products</h2>
       <div class="products-container container" v-if="products">
@@ -90,9 +93,10 @@ import Modal from '@/components/Modal.products.edit.vue'
 
 <style scoped>
 .card {
-  margin: auto;
   margin-top:60px;
+  margin-left: 25px;
   color: black;
+  padding-left: 10px;
 }
 .products-container {
   display: flex;
