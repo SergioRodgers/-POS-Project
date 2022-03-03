@@ -59,7 +59,7 @@ import Modal from '@/components/Modal.products.edit.vue'
           .then((response) => response.json())
           .then((json) => {
             this.products = json;
-            console.log(json)
+            // console.log(json)
             this.products.forEach(async (product) => {
               await fetch(
                 "https://balls-united.herokuapp.com/users/" + product.user_id,

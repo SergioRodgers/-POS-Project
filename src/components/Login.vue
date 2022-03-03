@@ -86,12 +86,11 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          if(json.jwt){
-            localStorage.setItem("jwt", json.jwt);
-            console.log(json.msg)
-            alert("User logged in");
-            this.$router.push({ name: "Dashboard" });
-          }
+          localStorage.setItem("jwt", json.jwt);
+          // console.log(json.jwt)
+          alert("User logged in");
+          this.$router.push({ name: "Dashboard" });
+          
           
         })
         .catch((err) => {
