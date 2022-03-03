@@ -16,9 +16,9 @@
               <input type="number" class="form-control" value="1" min="1" id="addToCart0">
               <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
           
-              <a href="#" id="edit-but" type="button" class="btn btn" ><i class="fa fa-edit" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></a>
+              <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></a>
               <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
-              <a class="btn btn-danger" @click="deleteProduct" >delete</a>
+              <a class="btn btn-danger" @click="deleteProduct">delete</a>
           </div>
           <Modal />
         </div>
