@@ -96,7 +96,8 @@ import Modal from '@/components/Modal.products.edit.vue'
 }
 .products-container {
   display: flex;
-  gap: 10px
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .card img {
