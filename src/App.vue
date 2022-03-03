@@ -15,7 +15,7 @@ export default {
 body{
   background-image: url(./assets/images/basketball.jpg);
   background-size:cover;
-   overflow:none !important;
+  
 }
 
 

@@ -45,7 +45,7 @@
               </div>
 
               <div>
-                <p class="mb-0">Already a meber? <router-link :to="{name: 'Home'}" class="text-white-50 fw-bold">Sign in</router-link></p>
+                <p class="mb-0">Already a member? <router-link :to="{name: 'Home'}" class="text-white-50 fw-bold">Sign in</router-link></p>
               </div>
 
             </form>

@@ -3,8 +3,21 @@
     <h2>Products</h2>
       <div class="products-container" v-if="products">
           <!-- First card -->
-        <div class="card" style="width: 18rem;" v-for="product of products"
-            :key="product._id">
+        <div class="card" style="width: 18rem;" v-for="product of products" :key="product._id">
+          <img src="https://i.postimg.cc/k5k9rXjs/Golden-State.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+          <h5 class="card-title">Golden State Warriors Vest (Home)</h5>
+          <p class="card-text">R 299.90</p>
+          <div class="d-flex mb-3">
+            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      <div>
+        <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit"></i></a>
+        <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+      </div>
+    </div>
+  </div>
         <!-- <img :src="product.image" :alt="product.title" class="card-image-top"/> -->
         <div class="card-body">
           <h5 class="card-title">{{product.title}}</h5>
@@ -14,7 +27,7 @@
         </div>
     </div>
     </div>
-  </div>
+  
   <div v-else>Loading products...</div>
      
 </template>
