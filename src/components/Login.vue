@@ -4,7 +4,7 @@
     <div class="col-5 landing">
       <div class="left-text">
           <h1>BallersUnited</h1>
-    <h2>Join our community of Ballers and get 20% off your first purchase!!</h2> 
+    <h2 style="color:white;">Join our community of Ballers and get 20% off your first purchase!!</h2> 
       </div>    
     </div>
   </div>
@@ -23,16 +23,16 @@
               <div class="mb-md-5 mt-md-4 pb-5">
 
                 <h1 class="fw-bold mb-2 text-uppercase">Login</h1>
-                <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                <p class="text-white-40 mb-5">Please enter your login and password!</p>
 
                 <div class="form-outline form-white mb-4">
                   <input type="email" id="typeEmailX" v-model="email" class="form-control form-control-lg">
-                  <label class="form-label text-dark" for="typeEmailX" style="margin-left: 0px;">Email</label>
+                  <label class="form-label text-light" for="typeEmailX" style="margin-left: 0px;">Email</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
 
                 <div class="form-outline form-white mb-4">
                   <input type="password" id="typePasswordX" v-model="password"  class="form-control form-control-lg">
-                  <label class="form-label text-dark" for="typePasswordX" style="margin-left: 0px;">Password</label>
+                  <label class="form-label text-light" for="typePasswordX" style="margin-left: 0px;">Password</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
                 <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
@@ -48,7 +48,7 @@
               </div>
 
               <div>
-                <p class="mb-0">Don't have an account? <span type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</span></p>
+                <p class="mb-0">Don't have an account? <span type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: white">Sign Up</span></p>
               </div>
 
               <Modal/>
@@ -108,5 +108,6 @@ export default {
 body {
   overflow: none !important;
 }
+
 
 </style>

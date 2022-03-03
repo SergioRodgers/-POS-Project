@@ -1,7 +1,7 @@
 <template>
-<footer class="bg-light text-center text-lg-start">
+<footer class="footer text-center-light text-lg-start">
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3" style="color: white">
     © 2022 BallersUnited, Inc.
     <a class="text-dark" href="https://mdbootstrap.com/"></a>
   </div>
@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style>
+.footer {
+    background-color:#4646463a;
+}
 
 </style>
