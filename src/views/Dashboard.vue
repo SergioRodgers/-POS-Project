@@ -144,10 +144,10 @@ import axios from 'axios'
 
 <style scoped>
 .card {
-  margin: auto;
   margin-top:60px;
+  margin-left: 25px;
   color: black;
-  /* width: calc((100% / 3) ); */
+  padding-left: 10px;
 }
 .products-container {
   display: flex;
