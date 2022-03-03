@@ -3,6 +3,10 @@
     <h2>Products</h2>
       <div class="products-container" v-if="products">
           <!-- First card -->
+        <!-- <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary" type="button" @click="sortNew">New</button>
+          <button class="btn btn-primary" type="button">Button</button>
+      </div> -->
         <div class="looping-over d-flex justify-content-center" v-for="product of products" :key="product._id">
           
             <div class="card" style="width: 16rem;" >
@@ -15,10 +19,11 @@
                 <p class="card-text">Category: {{product.categories.join(', ')}}</p>
                 <div class="d-flex mb-3">
                 <input type="number" class="form-control" value="1" min="1" id="addToCart0">
-                <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+
+                <button type="button" class="btn btn-secondary ms-3" @click="addCart"><i class="fa fa-shopping-cart"></i></button>
             
                 <a href="#" id="edit-but" type="button" class="btn btn"><i class="fa fa-edit" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></a>
-                <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+               
                 <a class="btn btn-danger" @click="deleteProduct(product._id)">delete</a>
                 </div>
               </div>
@@ -59,7 +64,41 @@ import axios from 'axios'
                         console.log(error)
                     });
                 }
-            }
+            },
+            addCart(id){
+        const config = {
+          headers:{
+            "Content-type": "application/json; charset=UTF-8",
+                  Authorization: `Bearer ${localStorage.getItem("jwt")}`
+              }
+            };
+                let apiURL = `https://balls-united.herokuapp.com/cart`;
+                let indexOfArrayItem = this.products.findIndex(i => i._id === id);
+                if (window.confirm("Do you really want add to cart?")) {
+                    axios.delete(apiURL, config).then(() => {
+                        alert("You successfully added to cart")
+                    }).catch(error => {
+                        console.log(error)
+                    });
+                }
+            },
+          sortNew(){
+            const config = {
+          headers:{
+            "Content-type": "application/json; charset=UTF-8",
+                  Authorization: `Bearer ${localStorage.getItem("jwt")}`
+              }
+            };
+                let apiURL = `https://balls-united.herokuapp.com/products?new=true`;
+                let indexOfArrayItem = this.products.findIndex(i => i._id === id);
+                if (window.confirm("Do you really want to delete?")) {
+                    axios.delete(apiURL, config).then(() => {
+                        this.products.splice(indexOfArrayItem, 1);
+                    }).catch(error => {
+                        console.log(error)
+                    });
+                }
+          }
     },
     components: { Modal },
     mounted() {
