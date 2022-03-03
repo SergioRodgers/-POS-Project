@@ -3,21 +3,22 @@
     <h2>Products</h2>
       <div class="products-container container" v-if="products">
           <!-- First card -->
-          <div class="looping-over" v-for="product of products"
-            :key="product._id">
-            <div class="card" style="width: 18rem;" >
-        <img :src="product.image" :alt="product.title" class="card-image-top"/>
-        <div class="card-body">
-          <h5 class="card-title">{{product.title}}</h5>
-          <p class="card-text">Written By: {{ product.author_name }}-</p>
-          <p class="card-text">Category: {{product.categories.join(', ')}}</p>
-          <div class="d-flex mb-3">
-            <input type="number" class="form-control" value="1" min="1" id="addToCart0">
-            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
+        <div class="looping-over" v-for="product of products" :key="product._id">
+          <div class="card" style="width: 18rem;" >
+            <router-link :to="{ name: 'ProductDetails', params: { id: product._id } }">
+              <img :src="product.image" :alt="product.title" title="More details" class="card-image-top"/>
+            </router-link>
+            <div class="card-body">
+              <h5 class="card-title">{{product.title}}</h5>
+              <p class="card-text">Written By: {{ product.author_name }}-</p>
+              <p class="card-text">Category: {{product.categories.join(', ')}}</p>
+              <div class="d-flex mb-3">
+              <input type="number" class="form-control" value="1" min="1" id="addToCart0">
+              <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(0)"><i class="fa fa-shopping-cart"></i></button>
           
-            <a href="#" id="edit-but" type="button" class="btn btn" ><i class="fa fa-edit" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></a>
-            <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
-            <a class="btn btn-danger" @click="deleteProduct" >delete</a>
+              <a href="#" id="edit-but" type="button" class="btn btn" ><i class="fa fa-edit" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></a>
+              <a href="#" id="del-but" type="button" class="btn btn-remove"><i class="fa fa-trash-o"></i></a>
+              <a class="btn btn-danger" @click="deleteProduct" >delete</a>
           </div>
           <Modal />
         </div>
@@ -40,7 +41,7 @@ import Modal from '@/components/Modal.products.edit.vue'
     },
     methods:{
       deleteProduct(){
-        fetch('https://balls-united.herokuapp.com/products/'+products._id, {
+        fetch('https://balls-united.herokuapp.com/products/', {
         method: 'DELETE',
       });
       }
@@ -98,6 +99,14 @@ import Modal from '@/components/Modal.products.edit.vue'
   gap: 10px
 }
 
-
+.card img {
+  height: 250px;
+  object-fit: cover;
+  margin-top: 2px;
+}
+.card .card-body {
+  height: 220px;
+  object-fit: cover;
+}
 
 </style>
